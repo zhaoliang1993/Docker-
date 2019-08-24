@@ -1,0 +1,23 @@
+一、启动相关
+  设置docker开机启动： systemctl enable docker
+  启动docker: systemctl restart docker
+  
+二、docker镜像的分类
+  1.基础镜像（docker.io提供）
+  2.自定义镜像，可以基于基础镜像实现镜像的自定义
+  
+三、docker镜像的相关命令
+  1.docker images  //查看镜像                            
+  2.docker search centos  //搜索镜像
+  3.docker pull Centos:7  //拉取镜像到本地
+  4.docker tag IMAGE_ID NEW_NAME  //镜像重命名
+  5.docker save docker.io/centos > /tep/centos.tar  //导出镜像
+  6.docker load < /tmp/centos.tar  //导入镜像
+  7.docker rmi -f IMAGE_ID  //删除镜像
+  8.docker run -it centos:7 /bin/bash  //启动容器  -i 表示交互  -t 表示打开一个shell窗口
+
+四、宿主机上的相关操作
+  1.docker ps  //查看运行的容器    -a 查看所有的容器
+  2.docker inspect  //查看容器详细信息
+  3.docker logs  //查看容器日志
+  4.docker rm  //删除容器   -f 强制删除
