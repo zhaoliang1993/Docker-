@@ -21,3 +21,14 @@
   2.docker inspect  //查看容器详细信息
   3.docker logs  //查看容器日志
   4.docker rm  //删除容器   -f 强制删除
+
+五、容器后台运行的特点
+  1.容器如果没有永远运行，终端一退出就会马上退出
+  2.容器永远运行的条件：需要永久运行的程序，并使用run -d后台启动程序
+ 
+六、怎样启动一个永远运行的程序？
+    1.创建后台容器：docker run -d cengos:7 /bin/bash
+    2.进入后台容器：docker exec -it *** /bin/bash
+    3.停止后台容器：docker stop ** 或者  docker kill ***
+    4.删除后台容器：docker rm ***
+    5.启动后台容器：docker start ***
